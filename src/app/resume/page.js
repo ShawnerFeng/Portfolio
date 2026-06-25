@@ -5,11 +5,7 @@ export default function ResumePage() {
     "Python",
     "MySQL",
     "AI",
-    "A*",
-    "Timeline",
-    "NavMesh",
     "Blender",
-    "ProBuilder",
     "Android Studio",
   ];
 
@@ -56,7 +52,6 @@ export default function ResumePage() {
         </h1>
 
         <p className="text-gray-400 max-w-5xl leading-8 text-lg">
-          我目前就读于香港大学计算机科学硕士（创新设计与科技方向），本科毕业于武汉理工大学通信工程专业。
           我主要关注关卡设计、系统设计以及 Unity 游戏开发，拥有独立完成游戏 Demo 的经历，
           并具备 AI、计算机视觉与自动化测试相关项目经验。希望未来从事关卡策划或系统策划相关工作。
         </p>
@@ -150,7 +145,7 @@ export default function ResumePage() {
           >
             <h3 className="text-2xl font-bold mb-3">《冰雕工厂》Demo</h3>
             <p className="text-gray-400 leading-7 mb-5">
-              第三人称动作解谜 Demo，包含投掷、破冰、火区、敌人 AI、
+              第三人称动作解谜 Demo，包含投掷、破冰、火焰、敌人 AI、
               机关交互与完整线性关卡流程。
             </p>
             <span className="text-cyan-400 font-bold">查看项目 →</span>

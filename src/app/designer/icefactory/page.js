@@ -2,11 +2,11 @@ export default function IceFactoryGDDPage() {
   const systems = [
     {
       title: "战斗体验",
-      text: "玩家可以使用冰锥、冰球、冰砖等冰质道具攻击敌人，也可以利用场景中的可破坏冰面和悬挂冰锥完成环境战斗。",
+      text: "玩家可以投掷冰锥、冰球、冰砖等冰质道具攻击敌人，其中冰砖可以起到防御作用，也可以利用场景中的可破坏冰面和悬挂冰锥完成环境战斗。",
     },
     {
       title: "解谜体验",
-      text: "关卡围绕冰块融化、火区变化、压力板机关和不同尺寸冰块展开，让玩家通过观察环境与操作道具完成谜题。",
+      text: "关卡围绕悬挂冰锥的掉落、冰块融化后的不同尺寸以及压力板机关展开，让玩家通过观察环境与操作道具完成谜题。",
     },
     {
       title: "探索体验",
@@ -22,18 +22,42 @@ export default function IceFactoryGDDPage() {
     "压力板机关",
     "钥匙开关",
     "塔吊与缆车",
-    "火区系统",
+    "火焰系统",
   ];
 
   const flow = [
-    "森林教学区",
-    "缆车过渡场景",
-    "原料加工区",
-    "冰块融化谜题",
-    "塔吊过渡场景",
-    "原料生产区战斗",
-    "控制区",
-    "最终高塔与滑梯离场",
+    {
+      title: "森林教学区",
+      text: "作为开场教学区域，引导玩家学习移动、跳跃、拾取、投掷、NPC 对话与钥匙机关等基础交互，并通过冰雕和机器人建立世界观。",
+    },
+    {
+      title: "缆车过渡场景",
+      text: "作为节奏缓冲与环境叙事段落，通过远景镜头展示雪山冰雕群，让玩家感受到当地冰雕文化与工厂所在空间的位置关系。",
+    },
+    {
+      title: "原料加工区",
+      text: "首次引入可破坏冰面机制，玩家需要利用投掷物或悬挂冰锥击碎冰面，打开通往下层区域的道路。",
+    },
+    {
+      title: "冰块融化谜题",
+      text: "围绕火区、普通冰与坚冰的体积变化设计谜题，玩家需要判断不同尺寸冰块的用途，并利用压力板机关完成通路开启。",
+    },
+    {
+      title: "塔吊过渡场景",
+      text: "通过大型工业机关完成区域转移，既符合工厂主题，也利用远景镜头展示关卡空间层次和下一目标方向。",
+    },
+    {
+      title: "原料生产区战斗",
+      text: "正式引入敌人战斗，玩家需要使用冰质道具攻击敌人，也可以结合可破坏冰面和悬挂冰锥完成环境击杀。",
+    },
+    {
+      title: "控制区",
+      text: "作为后期机制组合区域，引入火焰喷射器与坚冰墙，要求玩家利用融化机制开启通路，并为最终 Boss 战做准备。",
+    },
+    {
+      title: "最终高塔与滑梯离场",
+      text: "高塔承担最终挑战与剧情收束功能，滑梯则作为节奏释放段落，引导玩家离开工厂并看到逐渐融化的冰雕文明景观。",
+    },
   ];
 
   return (
@@ -57,7 +81,7 @@ export default function IceFactoryGDDPage() {
           </h1>
 
           <p className="text-gray-300 text-lg md:text-xl leading-8">
-            这是《冰雕工厂》Demo 的游戏设计文档页面，主要展示项目的设计目标、
+            《冰雕工厂》Demo 的游戏设计文档页面，主要展示项目的设计目标、
             核心体验、关卡规则、系统设计、线性流程以及后续可优化方向。
           </p>
         </div>
@@ -81,22 +105,22 @@ export default function IceFactoryGDDPage() {
       </section>
 
       <section className="px-10 md:px-24 py-12">
-        <p className="text-cyan-400 tracking-widest mb-3">项目目标</p>
+        <p className="text-cyan-400 tracking-widest mb-3">Design Goal</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Design Goal
+          项目目标
         </h2>
 
         <p className="text-gray-400 max-w-5xl leading-8 text-lg">
           本 Demo 目标是构建一个线性推进的第三人称动作解谜关卡。玩家需要学习并使用
           冰质道具、可破坏冰面、冰块融化、工业机关和敌人战斗等机制，在废弃的冰雕工厂中
-          逐步推进流程。同时，关卡通过冰雕、工厂遗迹和雪山环境表达记忆、传统与文明衰退的主题。
+          逐步推进流程。同时，关卡通过冰雕和工厂遗迹来表达记忆、传统与文明衰退的主题。
         </p>
       </section>
 
       <section className="px-10 md:px-24 py-12">
-        <p className="text-cyan-400 tracking-widest mb-3">核心体验</p>
+        <p className="text-cyan-400 tracking-widest mb-3">Three Core Experiences</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          Three Core Experiences
+          核心体验
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -113,9 +137,9 @@ export default function IceFactoryGDDPage() {
       </section>
 
       <section className="px-10 md:px-24 py-12">
-        <p className="text-cyan-400 tracking-widest mb-3">系统设计</p>
+        <p className="text-cyan-400 tracking-widest mb-3">Gameplay Rules</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          Gameplay Rules
+          系统设计
         </h2>
 
         <div className="grid md:grid-cols-4 gap-4">
@@ -137,30 +161,30 @@ export default function IceFactoryGDDPage() {
         </h2>
 
         <div className="space-y-4">
-          {flow.map((step, index) => (
-            <div
-              key={step}
-              className="flex gap-6 items-center bg-[#151b2d] p-6 rounded-2xl border border-white/10"
-            >
-              <div className="text-cyan-400 text-2xl font-bold w-12">
-                {String(index + 1).padStart(2, "0")}
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold">{step}</h3>
-                <p className="text-gray-400 mt-2">
-                  属于“教学 → 应用 → 综合挑战”线性推进结构的一部分。
-                </p>
-              </div>
+        {flow.map((step, index) => (
+          <div
+            key={step.title}
+            className="flex gap-6 items-center bg-[#151b2d] p-6 rounded-2xl border border-white/10"
+          >
+            <div className="text-cyan-400 text-2xl font-bold w-12">
+              {String(index + 1).padStart(2, "0")}
             </div>
-          ))}
+
+            <div>
+              <h3 className="text-2xl font-bold">{step.title}</h3>
+              <p className="text-gray-400 mt-2">
+                {step.text}
+              </p>
+            </div>
+          </div>
+        ))}
         </div>
       </section>
 
       <section className="px-10 md:px-24 py-12">
-        <p className="text-cyan-400 tracking-widest mb-3">设计逻辑</p>
+        <p className="text-cyan-400 tracking-widest mb-3">Teaching → Application → Challenge</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          Teaching → Application → Challenge
+          设计逻辑 教学 → 应用 → 综合挑战
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -191,14 +215,14 @@ export default function IceFactoryGDDPage() {
       </section>
 
       <section className="px-10 md:px-24 py-12">
-        <p className="text-cyan-400 tracking-widest mb-3">复盘与优化</p>
+        <p className="text-cyan-400 tracking-widest mb-3">Future Improvements</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Future Improvements
+          复盘与优化
         </h2>
 
         <div className="bg-[#151b2d] p-8 rounded-2xl border border-white/10">
           <p className="text-gray-400 leading-8 text-lg">
-            由于时间限制，最终 Boss 战和部分灯光系统没有完全实现。后续版本中，
+            由于时间限制 (项目总体耗时8天,还要撰写GDD和设计方案)，最终 Boss 战和部分灯光系统没有完全实现。后续版本中，
             Boss 战应作为核心机制的最终综合考验，结合地面破坏、冰甲弱点、火焰攻击、
             移动压力和多阶段战斗，让玩家完整运用前面学习到的投掷、破冰、融化和战斗机制。
           </p>

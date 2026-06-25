@@ -42,12 +42,12 @@ export default function IceFactoryPage() {
 
         <div className="bg-[#151b2d] p-6 rounded-xl">
           <p className="text-gray-400">工具</p>
-          <h3 className="text-xl font-bold">C# / Blender / ProBuilder</h3>
+          <h3 className="text-xl font-bold">C# / Blender / Aseprite</h3>
         </div>
 
         <div className="bg-[#151b2d] p-6 rounded-xl">
           <p className="text-gray-400">类型</p>
-          <h3 className="text-xl font-bold">动作解谜 Demo</h3>
+          <h3 className="text-xl font-bold">动作解谜冒险 Demo</h3>
         </div>
       </section>
 
@@ -84,7 +84,7 @@ export default function IceFactoryPage() {
         <p className="text-gray-400 max-w-4xl leading-8">
           这一部分通过六个角度展示《冰雕工厂》的设计思路：
           空间概念、核心机制、机关设计、战斗节奏、环境叙事和关卡流程。
-          重点不是简单展示截图，而是说明每个设计点在玩家体验中的作用。
+          介绍每个设计要点在玩家体验中的作用。
         </p>
       </section>
 
@@ -92,22 +92,22 @@ export default function IceFactoryPage() {
         image="/images/IceFactory/Factory01.png"
         subtitle="空间概念"
         title="工厂整体空间"
-        description="关卡建立在雪山内部的废弃冰雕工厂之中。工业结构与冰雪环境结合，既强化了场景主题，也为玩家提供了清晰的空间识别点和探索方向。"
+        description="关卡建立在雪山区域的废弃冰雕工厂之中。工业结构与冰雪环境结合，既强化了场景主题，也为玩家提供了清晰的空间识别点和探索方向。"
       />
 
       <ImageSection
         image="/images/IceFactory/Factory02.png"
         subtitle="核心玩法"
         title="投掷与破冰机制"
-        description="投掷冰锥是本关卡的核心玩法之一。玩家通过拾取和投掷冰质道具来破坏脆弱冰面、攻击敌人或触发场景机关。该机制按照教学、应用和挑战的顺序逐步展开。"
+        description="投掷冰道具是本关卡的核心玩法之一。玩家通过拾取和投掷冰质道具来破坏脆弱冰面、攻击敌人或触发场景机关。该机制按照教学、应用和挑战的顺序逐步展开。"
         reverse
       />
 
       <ImageSection
         image="/images/IceFactory/Factory03.png"
         subtitle="机关设计"
-        title="塔吊移动机关"
-        description="塔吊不仅承担区域移动功能，也用于改变玩家的观察视角和空间位置。相比普通传送，它更符合工厂主题，并让区域转换过程具有更强的演出感和记忆点。"
+        title="移动机关(电梯/塔吊)"
+        description="电梯和塔吊不仅承担区域移动功能，也用于改变玩家的观察视角和空间位置。相比普通传送，它更符合工厂主题，并让区域转换过程具有更强的演出感和记忆点。"
       />
 
       <ImageSection
@@ -122,7 +122,7 @@ export default function IceFactoryPage() {
         image="/images/IceFactory/Factory05.png"
         subtitle="环境叙事"
         title="融化的冰雕"
-        description="融化的冰雕与废弃的工业设施暗示了工厂曾经的繁荣与衰落。关卡不完全依赖对白说明背景，而是通过场景状态让玩家感受到冰雕文明逐渐被遗忘的主题。"
+        description="通往城市的道路上冰雕逐渐融化, 融化的冰雕与废弃的工业设施暗示了工厂与文明衰落。关卡不完全依赖对白说明背景，而是通过场景状态让玩家感受到冰雕文明逐渐被遗忘的主题。"
       />
 
       <ImageSection
@@ -135,11 +135,11 @@ export default function IceFactoryPage() {
 
       <section className="px-10 md:px-24 py-20">
         <p className="text-cyan-400 tracking-widest mb-3">
-          UNITY 实现内容
+          Technical Features
         </p>
 
         <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          Technical Features
+          UNITY 实现内容  
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -153,8 +153,8 @@ export default function IceFactoryPage() {
               text: "脆弱冰面与冰墙可以被投掷物或场景冰锥破坏，用于制造通路、解决谜题，或让敌人坠落死亡。",
             },
             {
-              title: "火区系统",
-              text: "火区会在安全和危险状态之间循环切换，在危险阶段对玩家造成伤害，并根据冰块类型改变其体积，用于构建融化解谜。",
+              title: "火焰系统",
+              text: "火焰区域会在安全和危险状态之间循环切换，在危险阶段对玩家造成伤害，并根据冰块类型改变其体积，用于构建融化解谜。后续玩家解锁火焰发射功能，可以融化坚冰墙并对敌人造成大量伤害",
             },
             {
               title: "敌人 AI",
@@ -184,27 +184,57 @@ export default function IceFactoryPage() {
         <h2 className="text-4xl font-bold mb-8">关卡特色</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
+
           <div className="bg-[#151b2d] p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-3">
-              线性关卡流程
+              统一冰雪交互系统
             </h3>
 
             <p className="text-gray-400 leading-7">
-              关卡整体按照教学、应用、综合挑战逐步推进，依次引入投掷、
-              破冰、搬运、火区、机关和战斗内容，让玩家在自然流程中学习并掌握机制。
+              关卡围绕“冰”这一核心元素构建统一交互规则体系，
+              包含冰质投掷物（冰锥/冰球/冰砖）、可掉落冰锥与可破坏冰面三类对象。
+              通过“投掷 → 碰撞 → 掉落 → 破坏 → 触发”的统一逻辑，
+              实现环境互动、解谜与战斗的一体化表达。
             </p>
           </div>
 
           <div className="bg-[#151b2d] p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-3">
-              环境交互机关
+              多阶段玩法递进设计
             </h3>
 
             <p className="text-gray-400 leading-7">
-              关卡中包含掉落冰锥、压力板、塔吊、电梯、可破坏冰墙、
-              火区和道具驱动机关，使解谜、战斗和空间移动都围绕冰雪工厂主题展开。
+              关卡采用教学—应用—综合挑战的递进结构，
+              从基础道具使用，到击落冰锥改变地形，
+              再到结合敌人站位进行环境击杀，
+              逐步强化玩家对同一套机制的多维度理解与应用。
             </p>
           </div>
+
+          <div className="bg-[#151b2d] p-6 rounded-xl">
+            <h3 className="text-xl font-bold mb-3">
+              冰雕生态与环境叙事
+            </h3>
+
+            <p className="text-gray-400 leading-7">
+              关卡构建完整“冰雕文明生态系统”，涵盖制冰、雕刻、展示到融化衰亡的全过程。
+              玩家在森林、工厂与后期城市迁移中，
+              通过冰雕状态变化直观感知文明从繁荣到衰退的环境叙事。
+            </p>
+          </div>
+
+          <div className="bg-[#151b2d] p-6 rounded-xl">
+            <h3 className="text-xl font-bold mb-3">
+              低成本扩展的规则化设计
+            </h3>
+
+            <p className="text-gray-400 leading-7">
+              所有交互均基于统一碰撞与触发规则实现，
+              不同玩法仅通过调整冰面、冰锥与敌人布局即可生成新关卡内容。
+              这种设计降低了系统复杂度，同时提升了关卡扩展性与复用效率。
+            </p>
+          </div>
+
         </div>
       </section>
     </main>

@@ -3,9 +3,11 @@ import ImageSection from "@/components/ImageSection";
 export default function FarmPage() {
   return (
     <main className="min-h-screen bg-[#0b0f19] text-white">
+
+      {/* Hero */}
       <section className="relative h-[70vh] flex items-end px-10 md:px-24 pb-16 overflow-hidden">
         <img
-          src="/images/FarmBanner.png"
+          src="/images/FarmBanner02.png"
           alt="Farm Simulation Demo"
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
@@ -14,7 +16,7 @@ export default function FarmPage() {
 
         <div className="relative z-10 max-w-4xl">
           <p className="text-green-400 tracking-widest mb-4">
-            UNITY 模拟经营系统项目
+            SYSTEM DESIGN / SIMULATION GAME
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -22,46 +24,42 @@ export default function FarmPage() {
           </h1>
 
           <p className="text-xl text-gray-300 leading-8">
-            一款功能完整的 Unity 模拟经营类农场 Demo，实现种植、背包、交易、
-            建造、地图系统、NPC 行为、Timeline 演出、动态灯光和 Save 存档等系统。
+            一个系统功能完善的的模拟经营系统Demo。
+            通过种植、交易、建造与NPC行为系统的联动，构建可持续发展的经营世界。
           </p>
         </div>
       </section>
 
+      {/* Role */}
       <section className="px-10 md:px-24 py-20 grid md:grid-cols-4 gap-6">
         <div className="bg-[#151b2d] p-6 rounded-xl">
-          <p className="text-gray-400">职责</p>
-          <h3 className="text-xl font-bold">系统设计 / Unity 开发</h3>
+          <p className="text-gray-400">定位</p>
+          <h3 className="text-xl font-bold">系统策划 / Unity开发</h3>
         </div>
 
         <div className="bg-[#151b2d] p-6 rounded-xl">
-          <p className="text-gray-400">引擎</p>
-          <h3 className="text-xl font-bold">Unity</h3>
+          <p className="text-gray-400">核心方向</p>
+          <h3 className="text-xl font-bold">模拟经营系统设计</h3>
         </div>
 
-        <div className="bg-[#151b2d] p-6 rounded-xl">
-          <p className="text-gray-400">技术</p>
-          <h3 className="text-xl font-bold">C# / A* / Save / Timeline</h3>
-        </div>
-
-        <div className="bg-[#151b2d] p-6 rounded-xl">
-          <p className="text-gray-400">类型</p>
-          <h3 className="text-xl font-bold">模拟经营 Demo</h3>
-        </div>
       </section>
 
+      {/* Overview */}
       <section className="px-10 md:px-24 py-10">
-        <h2 className="text-4xl font-bold mb-6">项目概述</h2>
+        <h2 className="text-4xl font-bold mb-6">核心设计理念</h2>
+
         <p className="text-gray-400 max-w-5xl leading-8">
-          本项目是一款模拟经营类农场 Demo，围绕“种植 → 收获 → 交易 → 建造 →
-          场景扩展”的经营循环展开。项目重点在于多个系统之间的联动：
-          背包系统负责物品数据管理，交易系统与货币结算联动，建造系统支持跨场景持久化，
-          NPC 则通过 Schedule 与 A* 寻路实现动态行为。
+          本项目围绕模拟经营游戏的核心循环进行设计：
+          玩家通过种植获取资源，通过交易系统转化为经济收益，
+          再投入到建造与扩张中形成持续成长的经营闭环。
+          同时通过NPC日程系统与A*寻路构建动态世界，
+          使整个农场具备持续运转的“生活感”。
         </p>
       </section>
 
+      {/* Video */}
       <section className="px-10 md:px-24 py-10">
-        <h2 className="text-4xl font-bold mb-8">Demo 演示视频</h2>
+        <h2 className="text-4xl font-bold mb-8">系统运行展示</h2>
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-[#151b2d] p-6 rounded-2xl">
@@ -72,141 +70,145 @@ export default function FarmPage() {
         </div>
       </section>
 
+      {/* System Overview */}
       <section className="px-10 md:px-24 pt-20">
         <p className="text-green-400 tracking-widest mb-3">
-          SYSTEM SHOWCASE
+          CORE SYSTEM LOOP
         </p>
 
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          系统设计展示
+          经营系统结构
         </h2>
 
         <p className="text-gray-400 max-w-4xl leading-8">
-          《农场物语》Demo 的重点不是单一玩法，而是多个模拟经营系统的组合。
-          这一部分展示种植、背包、交易、建造、NPC 行为和存档演出等核心系统，
-          以及它们如何共同构成完整的农场经营体验。
+          本项目并非单一玩法实现，而是围绕“生产—出售—消费—建造”的完整循环设计。
+          各系统既独立运行，又共同驱动玩家的长期经营目标。
         </p>
       </section>
 
+      {/* Image Sections (rewritten style) */}
       <ImageSection
         image="/images/Farm/Farm01.png"
-        subtitle="种植系统"
-        title="Planting System"
-        description="种植系统包含播种、浇水、成长阶段和收获逻辑。作物数据通过数据库统一管理，不同作物可以配置不同成长周期、阶段表现和产出结果。"
+        subtitle="资源入口系统"
+        title="种植与资源生产"
+        description="种植系统作为整个经营循环的起点，负责提供基础资源产出。
+        玩家通过播种、成长与收获获取作物，不同作物具有独立成长周期与产出结构，
+        为后续经济流通与建筑扩张提供持续资源来源。"
       />
 
       <ImageSection
         image="/images/Farm/Farm02.png"
-        subtitle="背包系统"
-        title="Inventory System"
-        description="背包系统负责管理玩家物品数据，支持物品拾取、堆叠、快捷栏显示和 UI 刷新。系统通过事件派发更新界面，使物品数据与前端展示保持同步。"
+        subtitle="数据中枢系统"
+        title="背包与物品管理"
+        description="背包系统作为所有系统的数据枢纽，统一管理物品获取、堆叠与消耗逻辑，
+        并通过事件驱动与UI进行同步，使种植、交易与建造系统能够共享同一套数据结构。"
         reverse
       />
 
       <ImageSection
         image="/images/Farm/Farm03.png"
-        subtitle="交易系统"
-        title="Trading System"
-        description="交易系统与背包和货币数据联动，玩家可以购买种子、出售作物并完成金币结算。该系统构成了农场经营循环中的资源回收与再投入环节。"
+        subtitle="经济调节系统"
+        title="交易与资源流通"
+        description="交易系统承担经营循环中的经济调节作用，将作物资源转化为金币收益，
+        并引导玩家在消费与投资之间进行资源分配，从而驱动整体经营节奏。"
       />
 
       <ImageSection
         image="/images/Farm/Farm04.png"
-        subtitle="建造系统"
-        title="Building System"
-        description="建造系统支持蓝图预览、位置检测和场景物体生成。建造完成后的物体会进入持久化数据中，保证玩家切换场景后建筑不会丢失。"
+        subtitle="成长扩展系统"
+        title="建造系统"
+        description="建造系统负责玩家长期成长目标，通过建筑扩展解锁新的功能与提高生产能力。
+        所有建造结果进入持久化数据体系，保证玩家的经营成果能够持续存在。"
         reverse
       />
 
       <ImageSection
         image="/images/Farm/Farm05.png"
-        subtitle="NPC 行为"
-        title="NPC Schedule"
-        description="NPC 通过 Schedule 数据在不同时间触发行为决策，并结合 A* 寻路移动到目标位置。该系统让 NPC 能够在日常时间轴中自动执行不同活动。"
+        subtitle="世界行为系统"
+        title="NPC日程与A*行为"
+        description="NPC基于Schedule系统进行时间驱动行为决策，并结合A*寻路在地图中执行移动与任务。
+        该系统使世界具备基础的“自运行能力”，增强模拟经营的沉浸感。"
       />
 
       <ImageSection
         image="/images/Farm/Farm06.png"
-        subtitle="演出与存档"
-        title="Timeline / Lighting / Save"
-        description="项目中使用 Timeline 控制剧情演出和开场动画，动态灯光系统实现昼夜变化，Save 系统则负责保存玩家数据、场景状态和建造结果。"
+        subtitle="世界持续性系统"
+        title="演出 / 光照 / 存档"
+        description="Timeline负责剧情与节奏控制，动态光照模拟昼夜变化，
+        Save系统则确保玩家状态与世界状态的持续保存，共同构建可持续运行的游戏世界。"
         reverse
       />
 
+      {/* System Highlights */}
       <section className="px-10 md:px-24 py-20">
         <p className="text-green-400 tracking-widest mb-3">
-          UNITY IMPLEMENTATION
+          SYSTEM DESIGN HIGHLIGHTS
         </p>
 
         <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          Technical Features
+          系统设计亮点
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "种植系统",
-              text: "通过作物数据、成长阶段和收获逻辑构建基础经营循环，使玩家能够从播种到产出形成完整体验。",
-            },
-            {
-              title: "背包系统",
-              text: "使用统一的物品数据结构管理 ID、数量、堆叠和快捷栏，并通过事件系统驱动 UI 刷新。",
-            },
-            {
-              title: "交易系统",
-              text: "商店系统与背包、货币数据联动，实现购买、出售、价格计算和库存变化。",
-            },
-            {
-              title: "建造系统",
-              text: "支持蓝图校验、场景生成和建造物持久化，保证玩家切换场景后建筑状态仍能保存。",
-            },
-            {
-              title: "NPC 行为系统",
-              text: "NPC 根据 Schedule 数据在每分钟触发行为判断，并通过 A* 寻路完成跨区域移动。",
-            },
-            {
-              title: "Timeline 与 Save",
-              text: "Timeline 用于控制剧情演出，动态灯光用于昼夜变化，Save 系统用于保存玩家进度和世界状态。",
-            },
-          ].map((feature) => (
-            <div
-              key={feature.title}
-              className="bg-[#151b2d] p-6 rounded-2xl border border-white/10"
-            >
-              <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-gray-400 leading-7">{feature.text}</p>
-            </div>
-          ))}
+
+          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-bold mb-3">经营循环驱动</h3>
+            <p className="text-gray-400 leading-7">
+              所有系统围绕资源生产、经济流通与建造扩展构建闭环，
+              玩家行为始终被循环结构驱动。
+            </p>
+          </div>
+
+          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-bold mb-3">模块化系统架构</h3>
+            <p className="text-gray-400 leading-7">
+              各系统独立设计，通过事件与数据接口实现解耦联动，
+              支持后续快速扩展新玩法。
+            </p>
+          </div>
+
+          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-bold mb-3">数据驱动设计</h3>
+            <p className="text-gray-400 leading-7">
+              作物、NPC行为与物品系统均采用数据配置驱动，
+              降低系统耦合，提高可扩展性。
+            </p>
+          </div>
+
         </div>
       </section>
 
+      {/* Closing */}
       <section className="px-10 md:px-24 py-10">
-        <h2 className="text-4xl font-bold mb-8">项目特点</h2>
+        <h2 className="text-4xl font-bold mb-8">设计总结</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
+
           <div className="bg-[#151b2d] p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-3">
-              模块化系统设计
+              可持续经营体验
             </h3>
 
             <p className="text-gray-400 leading-7">
-              项目将种植、背包、交易、建造、NPC 和存档拆分为相对独立的模块，
-              再通过事件系统和数据管理进行联动，便于后续扩展和维护。
+              通过完整的生产—流通—建造循环，
+              玩家始终处于资源增长与决策优化的经营节奏中。
             </p>
           </div>
 
           <div className="bg-[#151b2d] p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-3">
-              完整经营循环
+              系统模拟世界
             </h3>
 
             <p className="text-gray-400 leading-7">
-              玩家可以通过种植获得作物，通过交易获得金币，再利用资源进行建造和场景推进，
-              从而形成较完整的模拟经营闭环。
+              NPC行为、时间系统与建筑持久化共同构建持续运行的模拟世界，
+              提升整体沉浸感。
             </p>
           </div>
+
         </div>
       </section>
+
     </main>
   );
 }

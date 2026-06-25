@@ -16,7 +16,7 @@ export default function ImageSection({
           <img
             src={image}
             alt={title}
-            className="w-full rounded-2xl object-cover shadow-2xl"
+            className="w-full max-h-[580px] rounded-2xl object-cover shadow-2xl"
           />
         </div>
 

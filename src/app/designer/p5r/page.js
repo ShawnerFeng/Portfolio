@@ -34,78 +34,77 @@ export default function P5RPage() {
 
   return (
     <main className="min-h-screen bg-[#0b0f19] text-white">
+
+      {/* Banner */}
       <section className="relative h-[65vh] flex items-end px-10 md:px-24 pb-16 overflow-hidden">
         <img
           src="/images/P5R-Banner.png"
-          alt="Persona 5 Royal"
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
-
         <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-[#0b0f19]/60 to-transparent" />
 
         <div className="relative z-10 max-w-5xl">
           <p className="text-cyan-400 tracking-widest mb-4">
-            案例研究 CASE STUDY
+            CASE STUDY
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            P5R斑目宫殿画廊关卡拆解
+            P5R 斑目宫殿画廊关卡拆解
           </h1>
 
-          <p className="text-gray-300 max-w-5xl leading-8 text-lg mb-10">
-            本案例针对《女神异闻录5 皇家版》中斑目宫殿画廊区域进行关卡拆解，
-            重点分析其空间结构、画作穿梭机制、解谜流程、环境叙事以及整体设计思路，
-            并总结其中值得借鉴的关卡设计方法。
+          <p className="text-gray-300 leading-8 text-lg">
+            本案例针对画廊区域进行关卡拆解，分析其空间结构、画作穿梭机制与多阶段解谜设计。
           </p>
-
-          <div className="flex flex-wrap gap-3">
-            {["关卡设计", "解谜流程", "空间复用", "玩家引导", "环境叙事"].map(
-              (tag) => (
-                <span
-                  key={tag}
-                  className="px-4 py-2 rounded-full bg-white/10 text-gray-300 text-sm"
-                >
-                  {tag}
-                </span>
-              )
-            )}
-          </div>
         </div>
       </section>
 
+      {/* Info */}
       <section className="px-10 md:px-24 pb-10">
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
-            <p className="text-gray-400 mb-2">游戏</p>
-            <h3 className="text-xl font-bold">《女神异闻录5 皇家版》</h3>
+          <div className="bg-[#151b2d] p-6 rounded-2xl">
+            <p className="text-gray-400">游戏</p>
+            <h3 className="text-xl font-bold">Persona 5 Royal</h3>
           </div>
 
-          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
-            <p className="text-gray-400 mb-2">区域</p>
-            <h3 className="text-xl font-bold">斑目宫殿·画廊区域</h3>
+          <div className="bg-[#151b2d] p-6 rounded-2xl">
+            <p className="text-gray-400">区域</p>
+            <h3 className="text-xl font-bold">斑目宫殿·画廊</h3>
           </div>
 
-          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
-            <p className="text-gray-400 mb-2">分析重点</p>
-            <h3 className="text-xl font-bold">画作穿梭机制</h3>
+          <div className="bg-[#151b2d] p-6 rounded-2xl">
+            <p className="text-gray-400">核心机制</p>
+            <h3 className="text-xl font-bold">画作空间穿梭</h3>
           </div>
         </div>
       </section>
 
+      {/* Overview */}
       <section className="px-10 md:px-24 py-16">
         <p className="text-cyan-400 tracking-widest mb-3">关卡概述</p>
+
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           为什么这个关卡设计优秀？
         </h2>
 
-        <p className="text-gray-400 max-w-5xl leading-8 text-lg">
-          画廊区域并没有依赖大量战斗或复杂系统，而是围绕“穿越画作”这一核心机制展开设计。
-          玩家不断进入画中、从不同位置离开，在重复利用同一批空间节点的同时，
-          逐渐建立新的空间认知。整个关卡通过少量资源实现了丰富的探索体验，
-          也充分体现了空间复用与渐进式教学的设计思路。
+        <p className="text-gray-400 leading-8 max-w-5xl text-lg mb-10">
+          画廊区域围绕“穿越画作”这一核心机制展开，通过有限空间节点的重复利用，
+          实现复杂的路径变化与探索体验，是典型的“空间复用 + 机制驱动”设计案例。
         </p>
+
+        {/* 白膜图 */}
+        <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
+        <img
+          src="/images/p5r/blockout_overview.png"
+          alt="Whitebox Overview"
+          className="max-w-full max-h-[580px] w-auto h-auto rounded-xl"
+        />
+          <p className="text-gray-400 mt-4 text-sm">
+            图：画廊区域白膜结构图（用于展示画作连接关系与空间布局）
+          </p>
+        </div>
       </section>
 
+      {/* Sections */}
       <section className="px-10 md:px-24 py-10 space-y-8">
         {sections.map((section) => (
           <div
@@ -116,77 +115,126 @@ export default function P5RPage() {
               {section.subtitle}
             </p>
 
-            <h2 className="text-3xl font-bold mb-4">{section.title}</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              {section.title}
+            </h2>
 
-            <p className="text-gray-400 leading-8 text-lg">{section.text}</p>
+            <p className="text-gray-400 leading-8 text-lg">
+              {section.text}
+            </p>
           </div>
         ))}
       </section>
 
+      {/* 三阶段流程（改成图 + 文交替） */}
       <section className="px-10 md:px-24 py-16">
-        <p className="text-cyan-400 tracking-widest mb-3">路线设计</p>
-        <h2 className="text-4xl md:text-5xl font-bold mb-10">
+        <p className="text-cyan-400 tracking-widest mb-3">
           三阶段解谜流程
+        </p>
+
+        <h2 className="text-4xl md:text-5xl font-bold mb-10">
+          关卡结构拆解
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
-            <p className="text-cyan-400 mb-3">第一阶段</p>
-            <h3 className="text-2xl font-bold mb-3">理解规则</h3>
-            <p className="text-gray-400 leading-7">
-              玩家首次进入画作，学习画作之间互相连接的规则，并理解画作能够作为空间通道使用。
-            </p>
+        <div className="space-y-16">
+
+          {/* 阶段1 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <img
+              src="/images/p5r/stage1_loop.jpg"
+              className="rounded-2xl w-full"
+            />
+            <div>
+              <h3 className="text-2xl font-bold mb-3 text-cyan-400">
+                第一阶段：理解规则
+              </h3>
+              <p className="text-gray-400 leading-8">
+                玩家首次接触画作穿梭机制，通过入口与出口建立空间认知，
+                理解“画作=传送节点”的基础规则。
+              </p>
+            </div>
           </div>
 
-          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
-            <p className="text-cyan-400 mb-3">第二阶段</p>
-            <h3 className="text-2xl font-bold mb-3">重构路线</h3>
-            <p className="text-gray-400 leading-7">
-              开启新的画作后，玩家需要重新进入之前经过的画作，并利用新的出口方向抵达此前无法到达的机关区域。
-            </p>
+          {/* 阶段2 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="md:order-2">
+              <img
+                src="/images/p5r/stage2_loop.jpg"
+                className="rounded-2xl w-full"
+              />
+            </div>
+
+            <div className="md:order-1">
+              <h3 className="text-2xl font-bold mb-3 text-cyan-400">
+                第二阶段：路线重构
+              </h3>
+              <p className="text-gray-400 leading-8">
+                通过新增画作改变已有空间连接关系，
+                引导玩家重新利用旧路径，形成“空间回流”结构。
+              </p>
+            </div>
           </div>
 
-          <div className="bg-[#151b2d] p-6 rounded-2xl border border-white/10">
-            <p className="text-cyan-400 mb-3">第三阶段</p>
-            <h3 className="text-2xl font-bold mb-3">完成闭环</h3>
-            <p className="text-gray-400 leading-7">
-              最后一段路线将此前学习的所有规则组合起来，玩家利用新的连接关系完成整个空间闭环并抵达出口。
-            </p>
+          {/* 阶段3 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <img
+              src="/images/p5r/stage3_loop.jpg"
+              className="rounded-2xl w-full"
+            />
+
+            <div>
+              <h3 className="text-2xl font-bold mb-3 text-cyan-400">
+                第三阶段：闭环完成
+              </h3>
+              <p className="text-gray-400 leading-8">
+                多条路径最终汇聚形成完整空间闭环，
+                玩家利用所有画作节点完成最终出口路径。
+              </p>
+            </div>
           </div>
+
+          {/* 阶段4 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+
+            <div className="md:order-2">
+              <img
+                src="/images/p5r/stage4_loop.jpg"
+                className="rounded-2xl w-full"
+              />
+            </div>
+
+            <div className="md:order-1">
+              <h3 className="text-2xl font-bold mb-3 text-cyan-400">
+                总体探索路径：空间扩展与探索延伸
+              </h3>
+
+              <p className="text-gray-400 leading-8">
+                关卡通过有限数量的画作节点继续产生新的连接关系，
+                玩家可以重新访问已探索区域，但通过不同的入口与出口组合形成新的路径选择。
+                虽然画作数量有限，但空间结构通过循环连接被进一步扩展，
+                使探索体验从“线性完成”转向“多路径探索”，增强关卡的重玩性与空间深度。
+              </p>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
+      {/* Design */}
       <section className="px-10 md:px-24 py-16">
-        <p className="text-cyan-400 tracking-widest mb-3">设计思考</p>
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          我的设计收获
-        </h2>
+        <p className="text-cyan-400 tracking-widest mb-3">
+          设计总结
+        </p>
 
-        <div className="bg-[#151b2d] p-8 rounded-2xl border border-white/10">
+        <div className="bg-[#151b2d] p-8 rounded-2xl">
           <p className="text-gray-400 leading-8 text-lg">
-            通过拆解这一关卡，我更加理解了优秀关卡设计真正关注的是玩家体验的组织方式。
-            优秀的关卡不仅提供一条前进路线，更重要的是通过空间布局引导玩家学习规则、
-            重新认识空间、理解剧情信息，并利用奖励不断激励玩家继续探索。
-            这也是我在今后进行关卡设计时最希望实践的设计理念。
+            该关卡的核心价值在于“空间复用 + 规则渐进 + 机制驱动探索”，
+            通过少量资源构建高复杂度路径变化，是典型优秀箱庭解谜设计。
           </p>
         </div>
       </section>
 
-      <section className="px-10 md:px-24 py-20 flex gap-4">
-        <a
-          href="/designer"
-          className="inline-block px-6 py-3 bg-cyan-500 text-black font-bold rounded-lg"
-        >
-          ← 返回作品集
-        </a>
-
-        <a
-          href="/docs/P5R-Level-Breakdown.pdf"
-          className="inline-block px-6 py-3 border border-white/20 rounded-lg text-white"
-        >
-          下载完整拆解 PDF
-        </a>
-      </section>
     </main>
   );
 }

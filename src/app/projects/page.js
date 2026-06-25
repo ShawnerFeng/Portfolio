@@ -12,7 +12,7 @@ export default function ProjectsPage() {
 
         <p className="text-gray-400 max-w-4xl leading-8 text-lg">
           以下项目展示了我在关卡设计、Unity 游戏开发、游戏系统设计以及 AI
-          方向的实践经历。其中包含独立完成的游戏 Demo、课程项目以及设计分析作品。
+          方向的实践经历。其中包含独立完成的游戏 Demo、课程项目，游戏设计分析作品见Design页面。
         </p>
       </section>
 
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
 
             <div className="p-6">
               <p className="text-cyan-400 text-sm mb-2">
-                Unity / Level Design / Gameplay
+                Unity / Level Design 
               </p>
 
               <h2 className="text-2xl font-bold mb-3">
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
 
             <div className="p-6">
               <p className="text-green-400 text-sm mb-2">
-                Unity / Simulation / Save System
+                Unity / Simulation
               </p>
 
               <h2 className="text-2xl font-bold mb-3">

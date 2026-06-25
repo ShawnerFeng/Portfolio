@@ -19,7 +19,7 @@ export default function DesignerPage() {
       href: "/designer/p5r",
       image: "/images/P5R-Banner.png",
       color: "text-green-400",
-      border: "hover:border-red-400",
+      border: "hover:border-green-400",
       description:
         "围绕《女神异闻录5 皇家版》斑目宫殿画廊区域，从空间布局、机制设计、谜题流程、叙事表达与玩家引导等角度进行分析。",
       tags: ["关卡拆解", "Player Guidance", "Pacing", "Case Study"],

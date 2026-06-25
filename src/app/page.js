@@ -90,7 +90,7 @@ export default function Home() {
         <div className="p-6">
           <p className="text-gray-400 leading-7">
             第三人称冰雪工厂解谜动作 Demo，
-            包含投掷、破冰、火区、敌人 AI、
+            包含投掷、破冰、火焰、敌人 AI、
             机关与关卡流程。
           </p>
         </div>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="relative overflow-hidden">
 
           <img
-            src="/images/FarmBanner.png"
+            src="/images/FarmBanner02.png"
             className="w-full h-80 object-cover group-hover:scale-110 transition duration-500"
           />
 
